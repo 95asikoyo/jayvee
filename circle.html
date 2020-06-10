@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- favicon -->
+    <link rel="stylesheet" href="circle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>current awareness</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png.ico">
+</head>
+<body>
+    <h1>tunasonga mbele vizuri thanks for your support</h1>
+    <h2>Percentage of Kenyan citizens that have experienced our services</h2>
+    <div class="container">
+        <svg width="300" height="300" viewBox="0 0 300 300">
+            <defs>
+                <linearGradient id="Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#e100ff" />
+                    <stop offset="100%" stop-color="#00fff" />
+                </linearGradient>
+            </defs>
+        
+        <circle class="stat" cx="150" cy="150" r="100" />
+        <circle class="load" cx="150" cy="150" r="100" transform="rotate(-90 150 150)" />
+        <text class="num" stroke-width="2" x="150" y="55%" text-anchor="middle"></text>
+        </svg>
+    </div>
+
+    <script>
+        let text = document.querySelector(".num");
+        let load = document.querySelector(".load");
+
+        let numToText = 1;
+
+        let time = setInterval(function() {
+            numToText+= 1;
+            text.textContent = numToText + "%";
+
+            if(numToText === 81) {
+                clearInterval(time);
+                load.style.fillOpacity = 1;
+                text.style.fill = 1;
+                text.style.fontSize = "40px"
+                text.textLength = "105";
+            }
+        },50);
+    </script>
+</body>
+</html>

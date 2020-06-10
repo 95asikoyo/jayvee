@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    animation: animate 1.6s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%,40%,100% {
+        transform: scale(0.3);
+    }
+    20% {
+        transform: scale(1);
+    }
+}
+
+ul li:nth-child(1) {
+    animation-delay: -1.4s;
+    background: chartreuse;
+    box-shadow: 0 0 50px chartreuse;
+}
+
+ul li:nth-child(2) {
+    animation-delay: -1.2s;
+    background: orange;
+    box-shadow: 0 0 50px orange;
+}
+
+ul li:nth-child(3) {
+    animation-delay: -1s;
+    background: hotpink;
+    box-shadow: 0 0 50px hotpink;
+}
+
+ul li:nth-child(4) {
+    animation-delay: .8s;
+    background: red;
+    box-shadow: 0 0 50px red;
+}
+
+ul li:nth-child(5) {
+    animation-delay: .6s;
+    background: hotpink;
+    box-shadow: 0 0 50px hotpink;
+}
+
+ul li:nth-child(6) {
+    animation-delay: .4s;
+    background: orange;
+    box-shadow: 0 0 50px orange;
+}
+
+ul li:nth-child(7) {
+    animation-delay: .2s;
+    background: chartreuse;
+    box-shadow: 0 0 50px chartreuse;
+}
+
+h1 {
+    color: skyblue;
+    font-size: 70px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+
+    }
+
+    ul li {
+        list-style: none;
+        width: 30px;
+        height: 30px;
+        background: #fff;
+        border-radius: 50%;
+        animation: animate 1.6s ease-in-out infinite;
+ }
+
+}
